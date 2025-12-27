@@ -1,9 +1,9 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Helpers = require(ReplicatedStorage.Modules.Handlers.Helpers)
+local switch = require(ReplicatedStorage.switch)
 
 local player = game.Players.LocalPlayer
 
-local switch = Helpers:switch({name = player.Name}, {
+local Showcase = switch:switch({name = player.Name}, {
     case = {value = "Yuqorii", func = function()
         print("Found:", player.Name)
     end},
