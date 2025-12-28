@@ -1,6 +1,6 @@
 local module = {}
 
-function module:switch(object : number | {number} ,cases : {number}) : (number, {number})
+function module:switch(object, cases)
     if typeof(object) == "table" then
         for case_key, case_value in pairs(cases) do
             for enum_key, enum_value in pairs(object) do
