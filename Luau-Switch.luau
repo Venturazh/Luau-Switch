@@ -7,7 +7,7 @@ function module:switch(object, cases)
                 for inside_key, inside_value in pairs(case_value) do
                     if enum_value == inside_value then
                         case_value.func()
-                        return
+                        break
                     end
                 end
             end    
@@ -17,7 +17,7 @@ function module:switch(object, cases)
             for inside_key, inside_value in pairs(case_value) do
                 if object == inside_value then
                     case_value.func()
-                    return
+                    break
                 end
             end
         end
